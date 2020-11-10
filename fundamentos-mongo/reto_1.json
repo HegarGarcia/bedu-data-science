@@ -1,0 +1,28 @@
+[
+    {
+        "database": "sample_mflix",
+        "collection": "comments",
+        "project": {
+            "date": 1,
+            "name": 1,
+            "text": 1
+        }
+    },
+    {
+        "database": "sample_mflix",
+        "collection": "movies",
+        "project": {
+            "title": 1,
+            "cast": 1,
+            "year": 1
+        }
+    },
+    {
+        "database": "sample_mflix",
+        "collection": "users",
+        "project": {
+            "name": 1,
+            "password": 1
+        }
+    }
+]

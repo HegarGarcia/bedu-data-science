@@ -1,0 +1,45 @@
+[
+  {
+    "database": "sample_mflix",
+    "collection": "comments",
+    "filter": {
+      "name": "Greg Powell"
+    }
+  },
+  {
+    "database": "sample_mflix",
+    "collection": "comments",
+    "filter": {
+      "$or": [
+        {
+          "name": "Greg Powell"
+        },
+        {
+          "name": "Mercedes Tyler"
+        }
+      ]
+    }
+  },
+  {
+    "database": "sample_mflix",
+    "collection": "movies",
+    "project": {
+      "num_mflix_comments": 1
+    },
+    "sort": {
+      "num_mflix_comments": -1
+    },
+    "limit": 1
+  },
+  {
+    "database": "sample_mflix",
+    "collection": "movies",
+    "project": {
+      "title": 1
+    },
+    "sort": {
+      "num_mflix_comments": -1
+    },
+    "limit": 5
+  }
+]
