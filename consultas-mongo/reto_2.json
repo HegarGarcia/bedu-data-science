@@ -1,0 +1,20 @@
+[
+  {
+    "database": "sample_airbnb",
+    "collection": "listingsAndReviews",
+    "filter": {
+      "number_of_reviews": {
+        "$gte": 50
+      },
+      "review_scores.review_scores_rating": {
+        "$gte": 80
+      },
+      "amenities": {
+        "$in": [
+          "/Ethernet/"
+        ]
+      },
+      "address.country_code": "BR"
+    }
+  }
+]

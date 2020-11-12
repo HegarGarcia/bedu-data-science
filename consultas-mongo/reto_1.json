@@ -1,0 +1,30 @@
+[
+  {
+    "database": "sample_airbnb",
+    "collection": "listingsAndReviews",
+    "filter": {
+      "house_rules": "/(no parties)/i"
+    }
+  },
+  {
+    "database": "sample_airbnb",
+    "collection": "listingsAndReviews",
+    "filter": {
+      "house_rules": "/(pets allowed)/i"
+    }
+  },
+  {
+    "database": "sample_airbnb",
+    "collection": "listingsAndReviews",
+    "filter": {
+      "house_rules": "/(no smoking)/i"
+    }
+  },
+  {
+    "database": "sample_airbnb",
+    "collection": "listingsAndReviews",
+    "filter": {
+      "house_rules": "/(no smoking)|(no parties)/i"
+    }
+  }
+]

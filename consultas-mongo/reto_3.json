@@ -1,0 +1,19 @@
+[
+  {
+    "database": "sample_airbnb",
+    "collection": "listingsAndReviews",
+    "filter": {
+      "amenities": {
+        "$in": [
+          "Wifi",
+          "Ethernet"
+        ]
+      }
+    },
+    "aggregate": [
+      {
+        "$count": "total"
+      }
+    ]
+  }
+]
