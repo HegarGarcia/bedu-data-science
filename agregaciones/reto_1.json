@@ -1,0 +1,44 @@
+[
+  {
+    "$match": {
+      "property_type": "House",
+      "bedrooms": {
+        "$gt": 1
+      }
+    }
+  },
+  {
+    "$project": {
+      "price": {
+        "$sum": "$price"
+      },
+      "bedrooms": {
+        "$sum": "$bedrooms"
+      },
+      "address": {
+        "country": 1
+      }
+    }
+  },
+  {
+    "$group": {
+      "_id": "$address.country",
+      "sum_price": {
+        "$sum": "$price"
+      },
+      "sum_bedrooms": {
+        "$sum": "$bedrooms"
+      }
+    }
+  },
+  {
+    "$project": {
+      "avg_price_ bedroom": {
+        "$divide": [
+          "$sum_price",
+          "$sum_bedrooms"
+        ]
+      }
+    }
+  }
+]
